@@ -58,11 +58,10 @@ function renderCounselorDashboard(user) {
       <div class="card">
       <a href="counselor-booking.html" class="card-link" style="text-decoration:none;">📅 View Booked Sessions </a>
       </div>
-      <div class="card">👨‍🎓 Manage Students</div>
       <div class="card">📂 Upload Resources</div>
       <div class="card">💬 Forum Moderation</div>
       <div class="card">
-        <a href="profile.html" class="card-link">👤 View Profile</a>
+        <a href="profile.html" class="card-link" style="text-decoration:none;">👤 View Profile</a>
       </div>
     </div>
   `;
