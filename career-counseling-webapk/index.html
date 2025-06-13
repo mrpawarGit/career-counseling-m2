@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Career Counseling Platform</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/theme.js" defer></script>
-    <script src="js/index-auth.js" type="module" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -16,25 +15,254 @@
         <a href="index.html">Home</a>
         <a href="forum.html">Forum</a>
         <a href="job-board.html">Jobs</a>
-        <a href="dashboard.html" id="dashboardLink" style="display: none">Dashboard</a>
+        <a href="dashboard.html" id="dashboardLink" style="display: none"
+          >Dashboard</a
+        >
         <a href="login.html" id="loginLink">Login</a>
-        <a href="#" id="logoutBtn" style="display: none">Logout</a>
-        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌙</button>
+        <a href="#" id="logoutLink" style="display: none">Logout</a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+          🌙
+        </button>
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-      <h2>Welcome to the Career Counseling Platform</h2>
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Build Your Future With Confidence</h1>
       <p>
-        Your guide to building a better future with expert advice, job
-        resources, and mentorship!
+        Connect with mentors, take assessments, and explore the right career
+        path for you.
       </p>
-    </main>
+      <br />
+      <a href="register.html" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+        <h2>Platform Features</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <img
+              src="https://img.freepik.com/free-vector/choice-worker-concept-illustrated_52683-44076.jpg?semt=ais_hybrid&w=740"
+              alt="Assessments"
+            />
+            <h3>Career Assessments</h3>
+            <p>
+              Discover your strengths and get personalized career
+              recommendations.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="https://img.freepik.com/free-vector/internship-job-training-illustration_23-2148751280.jpg?ga=GA1.1.632634864.1749842672&semt=ais_hybrid&w=740"
+              alt="Mentorship"
+            />
+            <h3>1-on-1 Mentorship</h3>
+            <p>
+              Connect with expert counselors to guide you through career
+              decisions.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="https://img.freepik.com/free-vector/flat-employment-agency-search-new-employees-hire_88138-802.jpg?ga=GA1.1.632634864.1749842672&semt=ais_hybrid&w=740"
+              alt="Jobs"
+            />
+            <h3>Job Board</h3>
+            <p>
+              Explore internship and job opportunities tailored to your
+              interests.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="background-color: #f9f9f9">
+      <div class="container">
+        <h2>What Students Say</h2>
+        <div class="testimonials-slider">
+          <div class="testimonial">
+            <p>
+              "Thanks to this platform, I discovered my passion for digital
+              marketing and secured an internship at a top firm!"
+            </p>
+            <span>— Priya K., Marketing Student</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              "The resources and guidance I received here were instrumental in
+              helping me land my dream job. "
+            </p>
+            <span>— Rajiv T., Engineering Graduate</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              "I was unsure about my career path, but the career counseling
+              sessions helped me find clarity and confidence."
+            </p>
+            <span>— Neha S., Business Student</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              "This platform's workshops on resume building and interview skills
+              were a game-changer for me!"
+            </p>
+            <span>— Vikram J., IT Student</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              "I highly recommend the networking events; they connected me with
+              industry professionals and peers alike."
+            </p>
+            <span>— Aisha P., MBA Candidate</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              "The mentorship sessions were eye-opening and very insightful."
+            </p>
+            <span>— Rohan M., B.E. Graduate</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              "The assessment tools are very helpful for self-discovery. Highly
+              recommend!"
+            </p>
+            <span>— Kritika S., Aspiring Designer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counselors Section -->
+    <section class="section" id="counselors">
+      <div class="container">
+        <h2>Meet Our Counselors</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Counselor A"
+            />
+            <h3>Dr. Meera Patel</h3>
+            <p>
+              Career Coach with 10+ years experience in engineering & technology
+              guidance.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Counselor B"
+            />
+            <h3>Arjun Verma</h3>
+            <p>
+              Specializes in creative industries and entrepreneurship mentoring.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="https://randomuser.me/api/portraits/women/65.jpg"
+              alt="Counselor C"
+            />
+            <h3>Shalini Roy</h3>
+            <p>
+              Expert in higher education and scholarship application processes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Highlights -->
+    <section class="section" style="background-color: #f0f8f6">
+      <div class="container">
+        <h2>Featured Resources</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <h3>Resume Templates</h3>
+            <p>
+              Download modern and ATS-friendly templates to stand out to
+              recruiters.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Webinar Series</h3>
+            <p>
+              Join our upcoming sessions on interview preparation and career
+              building.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Career Blogs</h3>
+            <p>
+              Stay informed with career tips, growth strategies, and success
+              stories.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section id="cta">
+      <h2>Ready to Discover Your Dream Career?</h2>
+      <p>
+        Join now and start your career journey with guidance, assessments, and
+        opportunity.
+      </p>
+      <a href="login.html" class="cta-button">Join Now</a>
+    </section>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
     </footer>
+
+    <!-- Auth Check -->
+    <script type="module">
+      import { auth } from "./firebase-config.js";
+      import {
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+
+      const loginLink = document.getElementById("loginLink");
+      const logoutLink = document.getElementById("logoutLink");
+      const dashboardLink = document.getElementById("dashboardLink");
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          loginLink.style.display = "none";
+          logoutLink.style.display = "inline";
+          dashboardLink.style.display = "inline";
+        } else {
+          loginLink.style.display = "inline";
+          logoutLink.style.display = "none";
+          dashboardLink.style.display = "none";
+        }
+      });
+
+      logoutLink.addEventListener("click", async () => {
+        await signOut(auth);
+        window.location.href = "index.html";
+      });
+    </script>
+
+    <script>
+      // Auto-scroll testimonials
+      const slider = document.querySelector(".testimonials-slider");
+      let scrollAmount = 0;
+      setInterval(() => {
+        if (slider) {
+          scrollAmount += 320;
+          if (scrollAmount >= slider.scrollWidth - slider.clientWidth)
+            scrollAmount = 0;
+          slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
+        }
+      }, 4000);
+    </script>
   </body>
 </html>
