@@ -1,0 +1,173 @@
+/* css/auth.css (or login.css/signup.css) */
+
+/* Styles for the <main> element on authentication pages */
+.auth-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center .auth-container horizontally */
+  justify-content: center; /* Center .auth-container vertically */
+  flex: 1; /* Ensure it takes available space */
+  padding: 1rem; /* Add some padding */
+}
+
+/* Container for the authentication form */
+.auth-container {
+  background-color: var(
+    --bg-body
+  ); /* Or use a card-specific background if defined */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--text-color) 10%, transparent);
+  width: 100%;
+  max-width: 420px; /* Max width for the form */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .auth-container {
+  background-color: var(
+    --header-bg
+  ); /* Using a darker theme color for card background */
+  box-shadow: 0 4px 12px
+    color-mix(in srgb, var(--main-title-color) 15%, transparent);
+}
+
+.auth-container h2 {
+  text-align: center;
+  color: var(--main-title-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Form styling */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Spacing between form elements/groups */
+}
+
+.auth-container form div {
+  /* For label-input groups */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth-container form label {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.auth-container form input[type="text"],
+.auth-container form input[type="email"],
+.auth-container form input[type="password"],
+.auth-container form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--bg-body);
+  color: var(--text-color);
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+[data-theme="dark"] .auth-container form input[type="text"],
+[data-theme="dark"] .auth-container form input[type="email"],
+[data-theme="dark"] .auth-container form input[type="password"],
+[data-theme="dark"] .auth-container form select {
+  border-color: color-mix(in srgb, var(--text-color) 35%, transparent);
+  background-color: var(
+    --nav-hover-bg
+  ); /* Using dark theme's nav hover as input bg */
+  color: var(--text-color);
+}
+
+.auth-container form input[type="text"]:focus,
+.auth-container form input[type="email"]:focus,
+.auth-container form input[type="password"]:focus,
+.auth-container form select:focus {
+  outline: none;
+  border-color: var(--main-title-color);
+  box-shadow: 0 0 0 1px var(--main-title-color);
+}
+
+.auth-container form button[type="submit"] {
+  background-color: var(--main-title-color);
+  color: var(--header-text); /* Contrast text for the button */
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-container form button[type="submit"]:hover {
+  background-color: var(
+    --nav-hover-text
+  ); /* Swaps with nav link hover text color */
+  color: var(--nav-hover-bg); /* Swaps with nav link hover background color */
+}
+
+/* Link for "Don't have an account?" or "Already have an account?" */
+.auth-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.auth-link a {
+  color: var(--main-title-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* ----- RESPONSIVE ADJUSTMENTS for Auth Pages ----- */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1.5rem;
+    max-width: 90%; /* Allow it to use more of the screen width */
+  }
+
+  .auth-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .auth-container form input[type="text"],
+  .auth-container form input[type="email"],
+  .auth-container form input[type="password"],
+  .auth-container form select,
+  .auth-container form button[type="submit"] {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-main {
+    padding: 0; /* Remove padding from main to allow container to be full-width */
+    justify-content: flex-start; /* Align form to top on very small screens */
+    padding-top: 1rem; /* Add some top padding if header isn't too tall */
+  }
+
+  .auth-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 1rem; /* Adjust padding for smaller screens */
+    border-radius: 0; /* Full width, no border radius */
+    box-shadow: none; /* Remove shadow for a flatter look */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .auth-container h2 {
+    font-size: 1.5rem;
+  }
+}
