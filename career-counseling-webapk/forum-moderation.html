@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forum Moderation - Career Counseling Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forum.css" />
+    <link rel="stylesheet" href="css/forum-moderation.css" />
+    <script src="js/theme.js" defer></script>
+    <script src="js/forum-moderation.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Moderate Forum Posts</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="forum.html">Forum</a>
+        <a href="forum-moderation.html" class="active">Moderation</a>
+        <a href="job-board.html">Jobs</a>
+        <a href="login.html" id="loginLink">Login</a>
+        <a href="#" id="logoutBtn" style="display: none">Logout</a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+          🌙
+        </button>
+      </nav>
+    </header>
+
+    <main class="forum-main">
+      <section id="moderationPanel">
+        <h2>Manage Forum Posts</h2>
+        <div id="forumPosts"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
