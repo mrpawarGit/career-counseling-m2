@@ -23,7 +23,8 @@ if (signupForm) {
     const role = document.getElementById("role").value;
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      // alert("Passwords do not match");
+      document.getElementById("msg").innerText = "Passwords do not match";
       return;
     }
 
@@ -43,7 +44,7 @@ if (signupForm) {
         createdAt: new Date().toISOString(),
       });
 
-      alert("Signup successful!");
+      // alert("Signup successful!");
       window.location.href = "dashboard.html"; // Redirect after signup
     } catch (error) {
       console.error("Signup Error:", error);
@@ -76,7 +77,7 @@ if (logoutBtn) {
   logoutBtn.addEventListener("click", async () => {
     try {
       await signOut(auth);
-      alert("Logged out successfully");
+      // alert("Logged out successfully");
       window.location.href = "login.html";
     } catch (error) {
       console.error("Logout Error:", error);
