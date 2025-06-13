@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counselor Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/counselor-booking.css">
+</head>
+<body>
+  <header>
+    <h1 class="header-title">Career Guide</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="forum.html">Forum</a>
+      <a href="job-board.html">Jobs</a>
+      <a href="profile.html">Profile</a>
+      <a href="#" id="logoutBtn" class="btn btn-primary">Logout</a>
+      <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌙</button>
+    </nav>
+  </header>
+
+  <main class="booking-main">
+    <h2>Manage Counseling Sessions</h2>
+    <section>
+      <h3>Create Available Slot</h3>
+      <form id="slotForm" class="slot-form">
+        <label>
+          Date & Time:
+          <input type="datetime-local" id="slotDateTime" required>
+        </label>
+        <button type="submit" class="btn btn-primary">Add Slot</button>
+      </form>
+
+      <h3>Booked Sessions</h3>
+      <div id="counselorBookings" class="bookings-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
+  </footer>
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/counselor-booking.js" type="module" defer></script>
+</body>
+</html>

@@ -39,7 +39,7 @@ function renderStudentDashboard(user) {
       <a href="explore-careers.html" class="card-link" style="text-decoration:none;">📘 Explore Career Paths </a>
       </div>
       <div class="card">
-      <a href="book-session.html" class="card-link" style="text-decoration:none;">🧑‍🏫 Book Counseling Session </a>
+      <a href="student-booking.html" class="card-link" style="text-decoration:none;">🧑‍🏫 Book Counseling Session </a>
       </div>
       <div class="card">
       <a href="assessment.html" class="card-link" style="text-decoration:none;">📝 Take Assessment </a>
@@ -55,7 +55,9 @@ function renderCounselorDashboard(user) {
   dashboard.innerHTML = `
     <h2>Welcome, Counselor ${user.fullName}</h2>
     <div class="card-grid">
-      <div class="card">📅 View Booked Sessions</div>
+      <div class="card">
+      <a href="counselor-booking.html" class="card-link" style="text-decoration:none;">📅 View Booked Sessions </a>
+      </div>
       <div class="card">👨‍🎓 Manage Students</div>
       <div class="card">📂 Upload Resources</div>
       <div class="card">💬 Forum Moderation</div>

@@ -1,0 +1,114 @@
+/* General Styles */
+.booking-main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  text-align: left;
+}
+
+[data-theme="dark"] .booking-main {
+  background: #232323;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Slot Form Styles */
+.slot-form {
+  margin-bottom: 2rem;
+}
+
+.slot-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.slot-form input[type="datetime-local"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Bookings Container */
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+/* Slot Card Styles */
+.slot-card {
+  background: #f9f9f9;
+  border-left: 4px solid var(--main-title-color, #0d47a1);
+  border-radius: 7px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: background 0.3s;
+}
+
+[data-theme="dark"] .slot-card {
+  background: #181818;
+  border-left-color: var(--main-title-color, #81c3ff);
+}
+
+.slot-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.7rem;
+}
+
+[data-theme="dark"] .slot-card p {
+  color: #bbb;
+}
+
+/* Section Heading */
+.booking-main h2,
+.booking-main h3 {
+  color: var(--main-title-color, #0d47a1);
+  margin-bottom: 1.2rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--main-title-color, #0d47a1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #004d40;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .booking-main {
+    padding: 1rem 0.5rem;
+  }
+
+  .slot-card {
+    padding: 1rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
