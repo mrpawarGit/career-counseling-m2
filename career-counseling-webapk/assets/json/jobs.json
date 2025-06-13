@@ -1,0 +1,154 @@
+{
+  "jobs": {
+    "job1": {
+      "title": "Frontend Developer (React)",
+      "company": "TechSolutions Inc.",
+      "location": "Remote",
+      "type": "Full-time",
+      "salary": "$85,000 - $115,000",
+      "description": "Develop responsive web applications using React.js and modern frontend technologies. Collaborate with design and backend teams.",
+      "postedAt": "2025-06-01",
+      "applyUrl": "https://techsolutions.com/careers/frontend-dev"
+    },
+    "job2": {
+      "title": "Data Science Intern",
+      "company": "DataInsights Corp",
+      "location": "New York, NY",
+      "type": "Internship",
+      "salary": "$25 - $35/hour",
+      "description": "Summer internship for students to work on real-world data analysis projects using Python and machine learning.",
+      "postedAt": "2025-06-05",
+      "applyUrl": "https://datainsights.com/internships"
+    },
+    "job3": {
+      "title": "UX/UI Designer",
+      "company": "CreativeMind Studios",
+      "location": "San Francisco, CA",
+      "type": "Full-time",
+      "salary": "$90,000 - $120,000",
+      "description": "Create intuitive user interfaces and experiences for our digital products. Must have Figma expertise.",
+      "postedAt": "2025-05-28",
+      "applyUrl": "https://creativemind.design/hiring"
+    },
+    "job4": {
+      "title": "Backend Engineer (Node.js)",
+      "company": "API Masters",
+      "location": "Remote",
+      "type": "Full-time",
+      "salary": "$110,000 - $140,000",
+      "description": "Build and maintain scalable backend services and APIs using Node.js and AWS infrastructure.",
+      "postedAt": "2025-06-10",
+      "applyUrl": "https://apimasters.com/jobs/backend"
+    },
+    "job5": {
+      "title": "Marketing Assistant",
+      "company": "Growth Marketing LLC",
+      "location": "Chicago, IL",
+      "type": "Part-time",
+      "salary": "$22 - $28/hour",
+      "description": "Support marketing campaigns, social media management, and content creation.",
+      "postedAt": "2025-05-20",
+      "applyUrl": "https://growthmarketing.biz/careers"
+    },
+    "job6": {
+      "title": "DevOps Engineer",
+      "company": "CloudScale Technologies",
+      "location": "Austin, TX",
+      "type": "Full-time",
+      "salary": "$120,000 - $150,000",
+      "description": "Implement CI/CD pipelines and manage cloud infrastructure on AWS and Kubernetes.",
+      "postedAt": "2025-06-12",
+      "applyUrl": "https://cloudscale.tech/jobs/devops"
+    },
+    "job7": {
+      "title": "Technical Writer",
+      "company": "DocuTech",
+      "location": "Remote",
+      "type": "Contract",
+      "salary": "$50 - $70/hour",
+      "description": "Create technical documentation and tutorials for developer tools and APIs.",
+      "postedAt": "2025-05-15",
+      "applyUrl": "https://docutech.com/writers"
+    },
+    "job8": {
+      "title": "Product Manager",
+      "company": "InnovateSoft",
+      "location": "Boston, MA",
+      "type": "Full-time",
+      "salary": "$130,000 - $160,000",
+      "description": "Lead product development from conception to launch for our SaaS platform.",
+      "postedAt": "2025-06-08",
+      "applyUrl": "https://innovatesoft.com/careers/pm"
+    },
+    "job9": {
+      "title": "Cybersecurity Analyst",
+      "company": "SecureNet",
+      "location": "Washington, DC",
+      "type": "Full-time",
+      "salary": "$95,000 - $125,000",
+      "description": "Monitor systems for security threats and implement protective measures.",
+      "postedAt": "2025-05-25",
+      "applyUrl": "https://securenet.com/security-jobs"
+    },
+    "job10": {
+      "title": "HR Coordinator",
+      "company": "TalentFinders",
+      "location": "Remote",
+      "type": "Full-time",
+      "salary": "$60,000 - $80,000",
+      "description": "Support recruitment and HR operations for our growing tech company.",
+      "postedAt": "2025-06-03",
+      "applyUrl": "https://talentfinders.hr/careers"
+    },
+    "job11": {
+      "title": "Mobile Developer (Flutter)",
+      "company": "AppCraft",
+      "location": "Remote",
+      "type": "Full-time",
+      "salary": "$95,000 - $125,000",
+      "description": "Build cross-platform mobile applications using Flutter framework.",
+      "postedAt": "2025-05-30",
+      "applyUrl": "https://appcraft.io/jobs/mobile"
+    },
+    "job12": {
+      "title": "Data Analyst",
+      "company": "Metrics LLC",
+      "location": "Seattle, WA",
+      "type": "Full-time",
+      "salary": "$75,000 - $95,000",
+      "description": "Analyze business data and create reports to support decision making.",
+      "postedAt": "2025-06-07",
+      "applyUrl": "https://metrics.com/analyst-positions"
+    },
+    "job13": {
+      "title": "QA Engineer",
+      "company": "QualityFirst",
+      "location": "Remote",
+      "type": "Full-time",
+      "salary": "$80,000 - $110,000",
+      "description": "Develop and execute test plans to ensure software quality.",
+      "postedAt": "2025-05-18",
+      "applyUrl": "https://qualityfirst.test/jobs"
+    },
+    "job14": {
+      "title": "Sales Representative",
+      "company": "TechSales Pro",
+      "location": "Miami, FL",
+      "type": "Full-time",
+      "salary": "$65,000 + commission",
+      "description": "Sell our SaaS solutions to businesses with uncapped earning potential.",
+      "postedAt": "2025-06-09",
+      "applyUrl": "https://techsales.pro/hiring"
+    },
+    "job15": {
+      "title": "AI Research Intern",
+      "company": "Neural Labs",
+      "location": "San Jose, CA",
+      "type": "Internship",
+      "salary": "$30 - $40/hour",
+      "description": "Work with our AI team on cutting-edge machine learning research.",
+      "postedAt": "2025-05-22",
+      "applyUrl": "https://neural.labs/interns"
+    }
+  }
+}
