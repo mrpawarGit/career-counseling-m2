@@ -1,41 +1,62 @@
 /* css/assessment.css */
-.assessment-section {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: #fff;
-  border-radius: 8px;
-  padding: 2rem 2.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
 
-.assessment-section h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.assessment-main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
 }
 
 .question-block {
-  margin-bottom: 1.5rem;
+  background: #f0f0f0;
   padding: 1rem;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-.assessment-result {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 1.2rem;
-  color: #1a7f37;
+.question-block p {
+  font-weight: bold;
 }
 
-.btn.btn-primary {
-  background: #007bff;
-  color: #fff;
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.7rem 1.5rem;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 1rem;
   font-size: 1rem;
+  transition: background-color 0.2s;
 }
 
-.btn.btn-primary:hover {
-  background: #0056b3;
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+#resultContainer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #e0ffe0;
+  border: 1px solid #00aa00;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .assessment-main {
+    padding: 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .question-block {
+    padding: 0.7rem;
+  }
+  .submit-btn {
+    width: 100%;
+  }
 }

@@ -61,11 +61,15 @@ function renderJobs(jobs) {
 const logoutBtn = document.getElementById("logoutBtn");
 const dashboardLink = document.getElementById("dashboardLink");
 const profileLink = document.getElementById("profileLink");
+const loginLink = document.getElementById("loginLink");
 
 // Hide all auth-only links by default
 logoutBtn.style.display = "none";
 dashboardLink.style.display = "none";
 profileLink.style.display = "none";
+
+// Show login by default (in case user is not logged in)
+if (loginLink) loginLink.style.display = "inline-block";
 
 onAuthStateChanged(auth, async (user) => {
   currentUser = user;
@@ -76,6 +80,8 @@ onAuthStateChanged(auth, async (user) => {
     logoutBtn.style.display = "inline-block";
     dashboardLink.style.display = "inline-block";
     profileLink.style.display = "inline-block";
+    // Hide login button when logged in
+    if (loginLink) loginLink.style.display = "none";
 
     try {
       const userDoc = await getDoc(doc(db, "users", user.uid));
@@ -86,10 +92,17 @@ onAuthStateChanged(auth, async (user) => {
       console.error("Failed to fetch user role:", err);
     }
   }
+  else {
+    // Hide auth-only links if not logged in
+    logoutBtn.style.display = "none";
+    dashboardLink.style.display = "none";
+    profileLink.style.display = "none";
+    // Show login button when logged out
+    if (loginLink) loginLink.style.display = "inline-block";
+  }
 
   fetchJobs();
 });
-
 
 // Logout
 document.getElementById("logoutBtn").addEventListener("click", async (e) => {

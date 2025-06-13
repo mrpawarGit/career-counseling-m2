@@ -1,7 +1,10 @@
 // js/assessment.js
 import { auth, db } from "../firebase-config.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
-import { setDoc, doc } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+import {
+  setDoc,
+  doc,
+} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
 const form = document.getElementById("assessmentForm");
 const resultDiv = document.getElementById("assessmentResult");
@@ -22,11 +25,7 @@ if (form) {
     e.preventDefault();
 
     // Gather answers
-    const answers = [
-      form.q1.value,
-      form.q2.value,
-      form.q3.value,
-    ];
+    const answers = [form.q1.value, form.q2.value, form.q3.value];
 
     // Simple scoring
     const counts = { tech: 0, people: 0, creative: 0 };
