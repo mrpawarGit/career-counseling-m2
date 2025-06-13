@@ -1,6 +1,12 @@
 import { auth, db } from "../firebase-config.js";
-import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+import {
+  onAuthStateChanged,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+import {
+  doc,
+  getDoc,
+} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
 const dashboard = document.getElementById("dashboardContent");
 const logoutBtn = document.getElementById("logoutBtn");
@@ -31,9 +37,11 @@ function renderStudentDashboard(user) {
     <div class="card-grid">
       <div class="card">📘 Explore Career Paths</div>
       <div class="card">🧑‍🏫 Book Counseling Session</div>
-      <div class="card">📝 Take Assessment</div>
       <div class="card">
-        <a href="profile.html" class="card-link">👤 View Profile</a>
+      <a href="assessment.html" class="card-link" style="text-decoration:none;">📝 Take Assessment </a>
+      </div>
+      <div class="card">
+        <a href="profile.html" class="card-link" style="text-decoration:none;">👤 View Profile</a>
       </div>
     </div>
   `;

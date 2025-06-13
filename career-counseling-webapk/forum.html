@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forum - Career Counseling Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forum.css" />
+    <script src="js/theme.js" defer></script>
+    <script src="js/forum.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Career Guide Forum</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="forum.html" class="active">Forum</a>
+        <a href="job-board.html">Jobs</a>
+        <a href="login.html" id="loginLink">Login</a>
+        <a href="#" id="logoutBtn" style="display: none">Logout</a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+          🌙
+        </button>
+      </nav>
+    </header>
+    
+
+    <main class="forum-main">
+      <!-- Only visible to student -->
+      <section id="newQuestionSection" style="display: none">
+        <h3>Ask a New Question</h3>
+        <form id="questionForm">
+          <textarea
+            id="questionInput"
+            placeholder="Type your question here..."
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Post Question</button>
+        </form>
+      </section>
+
+      <hr />
+
+      <section id="forumPosts">
+        <h2>Community Discussions</h2>
+        <!-- Forum posts will appear here -->
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "post_001": {
+    "author": "Mayur Pawar",
+    "question": "How to prepare for campus interviews?",
+    "role": "student",
+    "timestamp": 1718100000000,
+    "replies": {
+      "reply_001": {
+        "author": "Counselor John",
+        "message": "Focus on DSA and communication skills.",
+        "timestamp": 1718101000000
+      }
+    }
+  },
+  "post_002": {
+    "author": "Aarti Sharma",
+    "question": "Which certifications help for a web dev career?",
+    "role": "student",
+    "timestamp": 1718200000000,
+    "replies": {
+      "reply_002": {
+        "author": "Mentor Priya",
+        "message": "Try Google UX or Meta Frontend Dev certs.",
+        "timestamp": 1718202000000
+      }
+    }
+  },
+  "post_003": {
+    "author": "Ravi K",
+    "question": "How do I improve my resume for tech roles?",
+    "role": "student",
+    "timestamp": 1718300000000,
+    "replies": {
+      "reply_003": {
+        "author": "Coach Neil",
+        "message": "Quantify your achievements and link projects.",
+        "timestamp": 1718301000000
+      }
+    }
+  },
+  "post_004": {
+    "author": "Simran Singh",
+    "question": "How to balance academics and internships?",
+    "role": "student",
+    "timestamp": 1718400000000,
+    "replies": {
+      "reply_004": {
+        "author": "Counselor Jane",
+        "message": "Plan a weekly calendar and prioritize.",
+        "timestamp": 1718402000000
+      }
+    }
+  },
+  "post_005": {
+    "author": "Manav Jain",
+    "question": "Are hackathons useful for beginners?",
+    "role": "student",
+    "timestamp": 1718500000000,
+    "replies": {
+      "reply_005": {
+        "author": "Mentor Rahul",
+        "message": "Absolutely! They give you team & project experience.",
+        "timestamp": 1718503000000
+      }
+    }
+  }
+}
