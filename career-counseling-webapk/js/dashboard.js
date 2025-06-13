@@ -35,8 +35,12 @@ function renderStudentDashboard(user) {
   dashboard.innerHTML = `
     <h2>Welcome, ${user.fullName}</h2>
     <div class="card-grid">
-      <div class="card">📘 Explore Career Paths</div>
-      <div class="card">🧑‍🏫 Book Counseling Session</div>
+      <div class="card">
+      <a href="explore-careers.html" class="card-link" style="text-decoration:none;">📘 Explore Career Paths </a>
+      </div>
+      <div class="card">
+      <a href=".html" class="card-link" style="text-decoration:none;">🧑‍🏫 Book Counseling Session </a>
+      </div>
       <div class="card">
       <a href="assessment.html" class="card-link" style="text-decoration:none;">📝 Take Assessment </a>
       </div>
