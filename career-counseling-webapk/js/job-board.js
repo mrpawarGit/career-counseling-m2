@@ -1,11 +1,12 @@
 // js/job-board.js
 import { auth, db } from "../firebase-config.js";
 import {
-  onAuthStateChanged
+  onAuthStateChanged,
+  signOut,
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
 import {
   doc,
-  getDoc
+  getDoc,
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
 const jobsList = document.getElementById("jobsList");
@@ -57,11 +58,16 @@ function renderJobs(jobs) {
 }
 
 // Check auth and get role if logged in
+const logoutBtn = document.getElementById("logoutBtn");
+logoutBtn.style.display = "none"; // Hide by default
+
 onAuthStateChanged(auth, async (user) => {
   currentUser = user;
   currentUserRole = null;
 
   if (user) {
+    logoutBtn.style.display = "inline-block"; // Show logout button
+
     try {
       const userDoc = await getDoc(doc(db, "users", user.uid));
       if (userDoc.exists()) {
@@ -73,4 +79,15 @@ onAuthStateChanged(auth, async (user) => {
   }
 
   fetchJobs();
+});
+
+// Logout
+document.getElementById("logoutBtn").addEventListener("click", async (e) => {
+  e.preventDefault();
+  try {
+    await signOut(auth);
+    window.location.href = "index.html";
+  } catch (error) {
+    console.error("Logout error:", error);
+  }
 });
