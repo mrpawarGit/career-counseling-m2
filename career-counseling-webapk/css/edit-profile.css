@@ -63,6 +63,22 @@
   border: 1px solid #444;
 }
 
+.profile-card select[multiple] {
+  height: 120px;
+  overflow-y: auto;
+}
+
+.profile-card small.hint {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: -0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+[data-theme="dark"] .profile-card small.hint {
+  color: #aaa;
+}
+
 .profile-card button {
   background-color: var(--main-title-color);
   color: white;

@@ -19,7 +19,9 @@
         <a href="job-board.html">Jobs</a>
         <a href="profile.html">Profile</a>
         <a href="#" id="logoutBtn">Logout</a>
-        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌙</button>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+          🌙
+        </button>
       </nav>
     </header>
 
@@ -27,36 +29,79 @@
       <h2>Edit Your Profile</h2>
       <form class="profile-card" id="editProfileForm">
         <label>
-          Full Name:
-          <input type="text" id="fullName" required />
+          Education Level:
+          <input
+            type="text"
+            id="education"
+            placeholder="e.g., B.Tech in Computer Science"
+            required
+          />
         </label>
 
         <label>
-          Interests:
-          <textarea id="interests" rows="3" placeholder="e.g., Web Dev, AI, Design"></textarea>
+          Institution Name:
+          <input
+            type="text"
+            id="institution"
+            placeholder="e.g., IIT Bombay"
+            required
+          />
         </label>
 
         <label>
-          Role:
-          <select id="role" required>
-            <option value="student">Student</option>
-            <option value="counselor">Counselor</option>
-          </select>
+          Graduation Year:
+          <input
+            type="number"
+            id="graduationYear"
+            placeholder="e.g., 2025"
+            min="1900"
+            max="2099"
+            required
+          />
         </label>
 
-        <div id="studentFields" style="display: none;">
-          <label>
-            Career Goals:
-            <textarea id="careerGoals" rows="2" placeholder="e.g., Become a Full-Stack Developer"></textarea>
-          </label>
-        </div>
+        <label>
+          Location:
+          <input
+            type="text"
+            id="location"
+            placeholder="e.g., Pune, Maharashtra"
+          />
+        </label>
 
-        <div id="counselorFields" style="display: none;">
-          <label>
-            Expertise:
-            <textarea id="expertise" rows="2" placeholder="e.g., Resume Building, Interview Prep"></textarea>
-          </label>
-        </div>
+        <label>
+          LinkedIn Profile:
+          <input
+            type="url"
+            id="linkedin"
+            placeholder="e.g., https://linkedin.com/in/yourname"
+          />
+        </label>
+
+        <label for="interests">Career Interests:</label>
+        <select id="interests" name="interests" multiple>
+          <option value="Engineering">Engineering</option>
+          <option value="IT">Information Technology</option>
+          <option value="Design">Design</option>
+          <option value="Finance">Finance</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Law">Law</option>
+          <option value="Education">Education</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+        </select>
+        <small class="hint">
+          Hold Ctrl (Windows) or Cmd (Mac) to select multiple
+        </small>
+
+        <label>
+          Career Goals:
+          <textarea
+            id="careerGoals"
+            rows="2"
+            placeholder="e.g., Become a Full-Stack Developer"
+          ></textarea>
+        </label>
 
         <button type="submit">Save Changes</button>
       </form>

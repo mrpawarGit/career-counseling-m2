@@ -6,35 +6,43 @@ import {
 import {
   doc,
   getDoc,
-  updateDoc,
+  setDoc,
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-const fullNameInput = document.getElementById("fullNameInput");
-const interestsInput = document.getElementById("interestsInput");
-const careerGoalsInput = document.getElementById("careerGoalsInput");
-const expertiseInput = document.getElementById("expertiseInput");
-const studentFields = document.getElementById("studentFields");
-const counselorFields = document.getElementById("counselorFields");
+// Form elements
+const form = document.getElementById("editProfileForm");
+const educationInput = document.getElementById("education");
+const institutionInput = document.getElementById("institution");
+const graduationYearInput = document.getElementById("graduationYear");
+const locationInput = document.getElementById("location");
+const linkedinInput = document.getElementById("linkedin");
+const interestsSelect = document.getElementById("interests");
+const careerGoalsInput = document.getElementById("careerGoals");
 
-let currentUID = null;
+let currentUser = null;
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
-    currentUID = user.uid;
+    currentUser = user;
     const userRef = doc(db, "users", user.uid);
-    const userSnap = await getDoc(userRef);
+    const docSnap = await getDoc(userRef);
 
-    if (userSnap.exists()) {
-      const data = userSnap.data();
-      fullNameInput.value = data.fullName || "";
-      interestsInput.value = data.interests || "";
+    if (docSnap.exists()) {
+      const data = docSnap.data();
 
-      if (data.role === "student") {
-        studentFields.style.display = "block";
-        careerGoalsInput.value = data.careerGoals || "";
-      } else if (data.role === "counselor") {
-        counselorFields.style.display = "block";
-        expertiseInput.value = data.expertise || "";
+      educationInput.value = data.education || "";
+      institutionInput.value = data.institution || "";
+      graduationYearInput.value = data.graduationYear || "";
+      locationInput.value = data.location || "";
+      linkedinInput.value = data.linkedin || "";
+      careerGoalsInput.value = data.careerGoals || "";
+
+      if (Array.isArray(data.interests)) {
+        [...interestsSelect.options].forEach((option) => {
+          if (data.interests.includes(option.value)) {
+            option.selected = true;
+          }
+        });
       }
     }
   } else {
@@ -42,34 +50,35 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-document
-  .getElementById("editProfileForm")
-  .addEventListener("submit", async (e) => {
-    e.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    const updates = {
-      fullName: fullNameInput.value.trim(),
-      interests: interestsInput.value.trim(),
-    };
+  if (!currentUser) {
+    alert("User not authenticated.");
+    return;
+  }
 
-    if (studentFields.style.display === "block") {
-      updates.careerGoals = careerGoalsInput.value.trim();
-    } else if (counselorFields.style.display === "block") {
-      updates.expertise = expertiseInput.value.trim();
-    }
+  const interests = Array.from(interestsSelect.selectedOptions).map(
+    (opt) => opt.value
+  );
 
-    try {
-      await updateDoc(doc(db, "users", currentUID), updates);
-      alert("Profile updated successfully!");
-      window.location.href = "profile.html";
-    } catch (error) {
-      console.error("Update failed:", error);
-      alert("Something went wrong. Please try again.");
-    }
-  });
+  const updatedData = {
+    education: educationInput.value.trim(),
+    institution: institutionInput.value.trim(),
+    graduationYear: graduationYearInput.value.trim(),
+    location: locationInput.value.trim(),
+    linkedin: linkedinInput.value.trim(),
+    interests,
+    careerGoals: careerGoalsInput.value.trim(),
+  };
 
-// Logout button
-document.getElementById("logoutBtn").addEventListener("click", async () => {
-  await signOut(auth);
-  window.location.href = "index.html";
+  try {
+    const userRef = doc(db, "users", currentUser.uid);
+    await setDoc(userRef, updatedData, { merge: true });
+    alert("Profile updated successfully!");
+    window.location.href = "profile.html";
+  } catch (error) {
+    console.error("Error updating profile:", error.message || error);
+    alert("Something went wrong while saving your profile.");
+  }
 });

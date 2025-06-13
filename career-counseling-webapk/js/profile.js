@@ -8,43 +8,41 @@ import {
   getDoc,
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-const fullNameEl = document.getElementById("fullName");
 const emailEl = document.getElementById("email");
-const roleEl = document.getElementById("role");
+const educationEl = document.getElementById("education");
+const institutionEl = document.getElementById("institution");
+const graduationYearEl = document.getElementById("graduationYear");
+const locationEl = document.getElementById("location");
+const linkedinEl = document.getElementById("linkedin");
 const interestsEl = document.getElementById("interests");
-const studentOnly = document.getElementById("studentOnly");
-const counselorOnly = document.getElementById("counselorOnly");
+const careerGoalsEl = document.getElementById("careerGoals");
+const editBtn = document.getElementById("editBtn");
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     const userRef = doc(db, "users", user.uid);
-    const userSnap = await getDoc(userRef);
+    const docSnap = await getDoc(userRef);
 
-    if (userSnap.exists()) {
-      const data = userSnap.data();
-      fullNameEl.textContent = data.fullName || "N/A";
+    if (docSnap.exists()) {
+      const data = docSnap.data();
       emailEl.textContent = user.email;
-      roleEl.textContent = data.role || "N/A";
-      interestsEl.textContent = data.interests || "N/A";
-
-      if (data.role === "student") {
-        studentOnly.style.display = "block";
-      } else if (data.role === "counselor") {
-        counselorOnly.style.display = "block";
-      }
+      educationEl.textContent = data.education || "N/A";
+      institutionEl.textContent = data.institution || "N/A";
+      graduationYearEl.textContent = data.graduationYear || "N/A";
+      locationEl.textContent = data.location || "N/A";
+      linkedinEl.href = data.linkedin || "#";
+      linkedinEl.textContent = data.linkedin ? "View Profile" : "N/A";
+      interestsEl.textContent = data.interests?.join(", ") || "N/A";
+      careerGoalsEl.textContent = data.careerGoals || "N/A";
     } else {
-      console.log("No user profile found");
+      alert("No profile data found. Please complete your profile.");
+      window.location.href = "edit-profile.html";
     }
   } else {
     window.location.href = "login.html";
   }
 });
 
-document.getElementById("editBtn").addEventListener("click", () => {
+editBtn.addEventListener("click", () => {
   window.location.href = "edit-profile.html";
-});
-
-document.getElementById("logoutBtn").addEventListener("click", async () => {
-  await signOut(auth);
-  window.location.href = "index.html";
 });
