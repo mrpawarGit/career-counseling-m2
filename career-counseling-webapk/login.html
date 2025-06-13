@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Career Counseling Platform</title>
+    <title>Login - Career Counseling Platform</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/theme.js" defer></script>
   </head>
@@ -24,12 +24,25 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-      <h2>Welcome to the Career Counseling Platform</h2>
-      <p>
-        Your guide to building a better future with expert advice, job
-        resources, and mentorship!
-      </p>
+    <!-- Main Content -->
+    <main class="auth-main">
+      <div class="auth-container">
+        <h2>Login to Your Account</h2>
+        <form id="loginForm">
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p class="auth-link">
+          Don't have an account? <a href="signup.html">Sign Up</a>
+        </p>
+      </div>
     </main>
 
     <!-- Footer -->

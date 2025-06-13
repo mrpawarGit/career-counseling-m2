@@ -2,25 +2,24 @@
 :root {
   --bg-body: #f4f6f9;
   --text-color: #333;
-  --header-bg: #004d99;
+  --header-bg: #004d40;
   --header-text: #fff;
-  --nav-hover-bg: #e0e0e0;
-  --nav-hover-text: #000;
-  --main-title-color: #0d47a1;
-  --footer-bg: #f1f1f1;
-  --footer-text: #333;
+  --nav-hover-bg: #e0f2f1;
+  --nav-hover-text: #004d40;
+  --main-title-color: #00695c;
+  --footer-bg: #e0f2f1;
+  --footer-text: #004d40;
 }
 
-/* Dark Theme Overrides */
 [data-theme="dark"] {
-  --bg-body: #1e1e2f;
-  --text-color: #e0e0e0;
-  --header-bg: #2c3e50;
-  --header-text: #ecf0f1;
-  --nav-hover-bg: #34495e;
-  --nav-hover-text: #ecf0f1;
-  --main-title-color: #81c3ff;
-  --footer-bg: #2c2c2e;
+  --bg-body: #121212;
+  --text-color: #e4e4e4;
+  --header-bg: #1f1f1f;
+  --header-text: #f4f4f4;
+  --nav-hover-bg: #333;
+  --nav-hover-text: #f4f4f4;
+  --main-title-color: #80cbc4;
+  --footer-bg: #1e1e1e;
   --footer-text: #ccc;
 }
 
@@ -47,13 +46,13 @@ header {
   background-color: var(--header-bg);
   color: var(--header-text);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header-title {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -82,10 +81,12 @@ nav a:hover {
   color: var(--nav-hover-text);
 }
 
+/* ===== TOGGLE BUTTON ===== */
 .theme-toggle {
   background: none;
-  border: 2px solid var(--header-text);
+  border: 1px solid var(--header-text);
   color: var(--header-text);
+  font-size: 1rem;
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
   cursor: pointer;

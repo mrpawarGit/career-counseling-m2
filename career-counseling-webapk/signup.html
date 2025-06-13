@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Career Counseling Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/theme.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1 class="header-title">Career Guide</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="forum.html">Forum</a>
+        <a href="job-board.html">Jobs</a>
+        <a href="login.html">Login</a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+          🌙
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <main class="auth-main">
+      <div class="auth-container">
+        <h2>Create Your Account</h2>
+        <form id="signupForm">
+          <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+          <div>
+            <label for="role">I am a:</label>
+            <select id="role" name="role" required>
+              <option value="">--Please choose an option--</option>
+              <option value="student">Student</option>
+              <option value="counselor">Counselor</option>
+            </select>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p class="auth-link">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
