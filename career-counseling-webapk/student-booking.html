@@ -1,42 +1,137 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Booking</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/student-booking.css">
-</head>
-<body>
-  <header>
-    <h1 class="header-title">Career Guide</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="forum.html">Forum</a>
-      <a href="job-board.html">Jobs</a>
-      <a href="profile.html">Profile</a>
-      <a href="#" id="logoutBtn" class="btn btn-primary">Logout</a>
-      <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌙</button>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Booking</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/student-booking.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Career Guide</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="forum.html">Forum</a>
+        <a href="job-board.html">Jobs</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn" class="btn btn-primary">Logout</a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+          🌙
+        </button>
+      </nav>
+    </header>
 
-  <main class="booking-main">
-    <h2>Book Counseling Session</h2>
-    <section>
-      <h3>Available Counselor Slots</h3>
-      <div id="availableSlots" class="slots-container"></div>
+    <main class="booking-main">
+      <h2>Book Counseling Session</h2>
+      <section>
+        <h3>Available Counselor Slots</h3>
+        <div id="availableSlots" class="slots-container"></div>
 
-      <h3>Your Booked Sessions</h3>
-      <div id="studentBookings" class="bookings-container"></div>
-    </section>
-  </main>
+        <h3>Your Booked Sessions</h3>
+        <div id="studentBookings" class="bookings-container"></div>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3 class="footer-logo">CareerPath</h3>
+          <p class="footer-mission">
+            Empowering students to make informed career choices through expert
+            guidance, personalized mentorship, and AI-driven tools.
+          </p>
+        </div>
 
-  <script src="js/theme.js" defer></script>
-  <script src="js/student-booking.js" type="module" defer></script>
-</body>
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contact Us</h4>
+          <address class="contact-info">
+            <p>123 Career Lane, Suite 100</p>
+            <p>Boston, MA 02110</p>
+            <p>
+              Email:
+              <a href="mailto:info@careerpath.com" class="footer-link"
+                >info@careerpath.com</a
+              >
+            </p>
+            <p>Phone: (555) 123-4567</p>
+          </address>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img
+                src="assets/svg/square-facebook-brands.svg"
+                alt="Facebook"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <img
+                src="assets/svg/square-x-twitter-brands.svg"
+                alt="Twitter"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <img
+                src="assets/svg/linkedin-brands.svg"
+                alt="LinkedIn"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <img
+                src="assets/svg/envelope-solid.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <img
+                src="assets/svg/reddit-brands.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <img
+                src="assets/svg/instagram-brands.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <div class="newsletter">
+            <p>Subscribe to our newsletter</p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="newsletter-input"
+              />
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p class="copyright">&copy; 2025 CareerPath. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="terms.html" class="legal-link">Terms of Service</a>
+          <a href="privacy.html" class="legal-link">Privacy Policy</a>
+          <a href="cookies.html" class="legal-link">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/theme.js" defer></script>
+    <script src="js/student-booking.js" type="module" defer></script>
+  </body>
 </html>
