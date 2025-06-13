@@ -62,11 +62,10 @@ if (loginForm) {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert("Login successful!");
       window.location.href = "dashboard.html"; // Redirect after login
     } catch (error) {
       console.error("Login Error:", error);
-      alert("Invalid email or password.");
+      document.getElementById("msg").innerText = "Invalid email or password.";
     }
   });
 }
