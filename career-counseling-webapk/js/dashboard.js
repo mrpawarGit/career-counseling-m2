@@ -39,7 +39,7 @@ function renderStudentDashboard(user) {
       <a href="explore-careers.html" class="card-link" style="text-decoration:none;">📘 Explore Career Paths </a>
       </div>
       <div class="card">
-      <a href=".html" class="card-link" style="text-decoration:none;">🧑‍🏫 Book Counseling Session </a>
+      <a href="book-session.html" class="card-link" style="text-decoration:none;">🧑‍🏫 Book Counseling Session </a>
       </div>
       <div class="card">
       <a href="assessment.html" class="card-link" style="text-decoration:none;">📝 Take Assessment </a>

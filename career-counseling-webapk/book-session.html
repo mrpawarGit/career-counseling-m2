@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Counseling Session - Career Counseling Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/book-session.css" />
+    <script src="js/theme.js" defer></script>
+    <script src="js/book-session.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Career Guide</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="forum.html">Forum</a>
+        <a href="job-board.html">Jobs</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn" class="btn btn-primary">Logout</a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌙</button>
+      </nav>
+    </header>
+
+    <main class="book-session-main">
+      <h2>Book Counseling Session</h2>
+
+      <!-- Student Section -->
+      <section id="studentSection" class="hidden">
+        <h3>Available Counselor Slots</h3>
+        <div id="availableSlots" class="slots-container"></div>
+
+        <h3>Your Booked Sessions</h3>
+        <div id="studentBookings" class="bookings-container"></div>
+      </section>
+
+      <!-- Counselor Section -->
+      <section id="counselorSection" class="hidden">
+        <h3>Create Available Slot</h3>
+        <form id="slotForm" class="slot-form">
+          <label>
+            Date & Time:
+            <input type="datetime-local" id="slotDateTime" required />
+          </label>
+          <button type="submit" class="btn btn-primary">Add Slot</button>
+        </form>
+
+        <h3>Your Created Slots</h3>
+        <div id="createdSlots" class="slots-container"></div>
+
+        <h3>Booked Sessions</h3>
+        <div id="counselorBookings" class="bookings-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

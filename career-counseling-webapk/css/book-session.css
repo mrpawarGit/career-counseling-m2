@@ -1,0 +1,114 @@
+/* ===== BOOK SESSION PAGE STYLES ===== */
+
+.book-session-main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  text-align: left;
+}
+
+[data-theme="dark"] .book-session-main {
+  background: #232323;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slot-form {
+  margin-bottom: 2rem;
+}
+
+.slot-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.slot-form input[type="datetime-local"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.slots-container, .bookings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+/* Slot Card */
+.slot-card {
+  background: #f9f9f9;
+  border-left: 4px solid var(--main-title-color, #0d47a1);
+  border-radius: 7px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: background 0.3s;
+}
+
+[data-theme="dark"] .slot-card {
+  background: #181818;
+  border-left-color: var(--main-title-color, #81c3ff);
+}
+
+.slot-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.7rem;
+}
+
+[data-theme="dark"] .slot-card p {
+  color: #bbb;
+}
+
+.slot-card button {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: var(--main-title-color, #0d47a1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.slot-card button:hover {
+  background: #004d40;
+}
+
+/* Section Heading */
+.book-session-main h2, .book-session-main h3 {
+  color: var(--main-title-color, #0d47a1);
+  margin-bottom: 1.2rem;
+}
+
+/* Hidden Section */
+.hidden {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .book-session-main {
+    padding: 1rem 0.5rem;
+  }
+
+  .slot-card {
+    padding: 1rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .slot-card button {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
