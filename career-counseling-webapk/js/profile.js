@@ -50,3 +50,9 @@ onAuthStateChanged(auth, async (user) => {
 editBtn.addEventListener("click", () => {
   window.location.href = "edit-profile.html";
 });
+
+// Logout
+logoutBtn.addEventListener("click", async () => {
+  await signOut(auth);
+  window.location.href = "login.html";
+});
