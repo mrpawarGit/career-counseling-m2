@@ -6,6 +6,7 @@
     <title>Dashboard - Career Counseling Platform</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <script src="js/theme.js" defer></script>
     <script src="js/dashboard.js" type="module" defer></script>
   </head>
@@ -30,9 +31,235 @@
       <p>Loading dashboard...</p>
     </main>
 
+    <!-- add here -->
+    <!-- Dashboard Widgets -->
+    <section class="dashboard-widgets">
+      <!-- Welcome Banner
+      <div class="widget welcome-banner">
+        <div class="welcome-content">
+          <h2>Welcome back, <span id="username">User</span>!</h2>
+          <p>Your personalized career journey starts here.</p>
+          <button class="cta-button">Explore Opportunities</button>
+        </div>
+        <div class="welcome-illustration">
+          <img src="assets/svg/career_goals.svg" alt="Career goals illustration">
+        </div>
+      </div> -->
+
+      <!-- Quick Stats -->
+      <div class="widget quick-stats">
+        <div class="stat-card">
+          <h3>Career Matches</h3>
+          <p class="stat-value" id="careerMatches">5</p>
+          <p class="stat-label">Based on your profile</p>
+        </div>
+        <div class="stat-card">
+          <h3>Upcoming Events</h3>
+          <p class="stat-value" id="upcomingEvents">2</p>
+          <p class="stat-label">This week</p>
+        </div>
+        <div class="stat-card">
+          <h3>New Jobs</h3>
+          <p class="stat-value" id="newJobs">12</p>
+          <p class="stat-label">In your field</p>
+        </div>
+      </div>
+
+      <!-- Career Path Progress -->
+      <div class="widget progress-tracker">
+        <h3>Your Career Path Progress</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 65%"></div>
+        </div>
+        <p>65% profile completion</p>
+        <ul class="progress-checklist">
+          <li class="completed">✓ Basic information</li>
+          <li class="completed">✓ Skills assessment</li>
+          <li class="current">⏳ Personality test</li>
+          <li>Career preferences</li>
+        </ul>
+      </div>
+
+      <!-- Recommended Jobs -->
+      <div class="widget recommended-jobs">
+        <div class="widget-header">
+          <h3>Recommended For You</h3>
+          <a href="job-board.html" class="view-all">View All</a>
+        </div>
+        <div class="job-cards">
+          <div class="job-card">
+            <h4>Junior UX Designer</h4>
+            <p class="company">TechSolutions Inc.</p>
+            <p class="location">Remote • Full-time</p>
+            <div class="job-skills">
+              <span class="skill-tag">UI/UX</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Wireframing</span>
+            </div>
+          </div>
+          <div class="job-card">
+            <h4>Marketing Associate</h4>
+            <p class="company">Creative Minds Agency</p>
+            <p class="location">Boston, MA • Hybrid</p>
+            <div class="job-skills">
+              <span class="skill-tag">Social Media</span>
+              <span class="skill-tag">Content Creation</span>
+              <span class="skill-tag">Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming Events -->
+      <div class="widget upcoming-events">
+        <div class="widget-header">
+          <h3>Upcoming Events</h3>
+          <!-- <a href="events.html" class="view-all">View Calendar</a> -->
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">Jun</span>
+          </div>
+          <div class="event-details">
+            <h4>Tech Career Fair 2025</h4>
+            <p class="event-time">10:00 AM - 4:00 PM • Virtual</p>
+            <button class="rsvp-button">RSVP</button>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="day">22</span>
+            <span class="month">Jun</span>
+          </div>
+          <div class="event-details">
+            <h4>Resume Workshop</h4>
+            <p class="event-time">2:00 PM - 3:30 PM • Campus Hall B</p>
+            <button class="rsvp-button">RSVP</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="widget quick-actions">
+        <h3>Quick Actions</h3>
+        <div class="action-buttons">
+          
+          <a class="action-button" href="edit-profile.html" style="text-decoration: none ; color: #00796b;">
+            <img src="assets/svg/user-solid.svg" alt="" />
+            <span>Edit Profile</span></a>
+          </a>
+          <a class="action-button" href="job-board.html" style="text-decoration: none ; color: #00796b;">
+            <img src="assets/svg/wrench-solid.svg" alt="" />
+            <span>Jobs</span></a>
+          </a>
+          <a class="action-button" href="forum.html" style="text-decoration: none ; color: #00796b;">
+            <img src="assets/svg/discourse-brands.svg" alt="" />
+            <span>Forum</span></a>
+          </a>
+          <a class="action-button" href="index.html" style="text-decoration: none ; color: #00796b;">
+            <img src="assets/svg/house-solid.svg" alt="" />
+            <span>Home</span></a>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Career Counseling Platform. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3 class="footer-logo">CareerPath</h3>
+          <p class="footer-mission">
+            Empowering students to make informed career choices through expert
+            guidance, personalized mentorship, and AI-driven tools.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contact Us</h4>
+          <address class="contact-info">
+            <p>123 Career Lane, Suite 100</p>
+            <p>Boston, MA 02110</p>
+            <p>
+              Email:
+              <a href="mailto:info@careerpath.com" class="footer-link"
+                >info@careerpath.com</a
+              >
+            </p>
+            <p>Phone: (555) 123-4567</p>
+          </address>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img
+                src="assets/svg/square-facebook-brands.svg"
+                alt="Facebook"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <img
+                src="assets/svg/square-x-twitter-brands.svg"
+                alt="Twitter"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <img
+                src="assets/svg/linkedin-brands.svg"
+                alt="LinkedIn"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <img
+                src="assets/svg/envelope-solid.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <img
+                src="assets/svg/reddit-brands.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <img
+                src="assets/svg/instagram-brands.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <div class="newsletter">
+            <p>Subscribe to our newsletter</p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="newsletter-input"
+              />
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p class="copyright">&copy; 2025 CareerPath. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="terms.html" class="legal-link">Terms of Service</a>
+          <a href="privacy.html" class="legal-link">Privacy Policy</a>
+          <a href="cookies.html" class="legal-link">Cookie Policy</a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

@@ -33,19 +33,19 @@ onAuthStateChanged(auth, async (user) => {
 
 function renderStudentDashboard(user) {
   dashboard.innerHTML = `
-    <h2>Welcome, ${user.fullName}</h2>
+    <h2 style="text-align: center;">Welcome, ${user.fullName}</h2>
     <div class="card-grid">
       <div class="card">
-      <a href="explore-careers.html" class="card-link" style="text-decoration:none;">📘 Explore Career Paths </a>
+      <a href="explore-careers.html" class="card-link" style="text-decoration:none;">📘 </br>Explore Career Paths </a>
       </div>
       <div class="card">
-      <a href="student-booking.html" class="card-link" style="text-decoration:none;">🧑‍🏫 Book Counseling Session </a>
+      <a href="student-booking.html" class="card-link" style="text-decoration:none;">🧑‍🏫 </br>Book Counseling Session </a>
       </div>
       <div class="card">
-      <a href="assessment.html" class="card-link" style="text-decoration:none;">📝 Take Assessment </a>
+      <a href="assessment.html" class="card-link" style="text-decoration:none;">📝 </br>Take Assessment </a>
       </div>
       <div class="card">
-        <a href="profile.html" class="card-link" style="text-decoration:none;">👤 View Profile</a>
+        <a href="profile.html" class="card-link" style="text-decoration:none;">👤 </br>View Profile</a>
       </div>
     </div>
   `;
@@ -53,17 +53,17 @@ function renderStudentDashboard(user) {
 
 function renderCounselorDashboard(user) {
   dashboard.innerHTML = `
-    <h2>Welcome, Counselor ${user.fullName}</h2>
+    <h2 style="text-align: center;">Welcome, Counselor ${user.fullName}</h2>
     <div class="card-grid">
       <div class="card">
-      <a href="counselor-booking.html" class="card-link" style="text-decoration:none;">📅 View Booked Sessions </a>
+      <a href="counselor-booking.html" class="card-link" style="text-decoration:none;">📅 </br>View Booked Sessions </a>
       </div>
       <div class="card">📂 Upload Resources</div>
       <div class="card">
-      <a href="forum-moderation.html" class="card-link" style="text-decoration:none;">💬 Forum Moderation </a>
+      <a href="forum-moderation.html" class="card-link" style="text-decoration:none;">💬 </br>Forum Moderation </a>
       </div>
       <div class="card">
-        <a href="profile.html" class="card-link" style="text-decoration:none;">👤 View Profile</a>
+        <a href="profile.html" class="card-link" style="text-decoration:none;">👤 </br>View Profile</a>
       </div>
     </div>
   `;
