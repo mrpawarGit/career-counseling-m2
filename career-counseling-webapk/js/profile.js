@@ -8,6 +8,8 @@ import {
   getDoc,
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
+const fullName = document.getElementById("fullName");
+const role = document.getElementById("role");
 const emailEl = document.getElementById("email");
 const educationEl = document.getElementById("education");
 const institutionEl = document.getElementById("institution");
@@ -25,6 +27,8 @@ onAuthStateChanged(auth, async (user) => {
 
     if (docSnap.exists()) {
       const data = docSnap.data();
+      fullName.textContent = data.fullName;
+      role.textContent = data.role;
       emailEl.textContent = user.email;
       educationEl.textContent = data.education || "N/A";
       institutionEl.textContent = data.institution || "N/A";
