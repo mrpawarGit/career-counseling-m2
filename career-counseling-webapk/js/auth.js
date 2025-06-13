@@ -1,4 +1,4 @@
-// auth.js
+// js/auth.js
 
 import { auth, db } from "../firebase-config.js";
 import {
