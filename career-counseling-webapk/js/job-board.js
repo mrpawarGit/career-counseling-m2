@@ -59,14 +59,23 @@ function renderJobs(jobs) {
 
 // Check auth and get role if logged in
 const logoutBtn = document.getElementById("logoutBtn");
-logoutBtn.style.display = "none"; // Hide by default
+const dashboardLink = document.getElementById("dashboardLink");
+const profileLink = document.getElementById("profileLink");
+
+// Hide all auth-only links by default
+logoutBtn.style.display = "none";
+dashboardLink.style.display = "none";
+profileLink.style.display = "none";
 
 onAuthStateChanged(auth, async (user) => {
   currentUser = user;
   currentUserRole = null;
 
   if (user) {
-    logoutBtn.style.display = "inline-block"; // Show logout button
+    // Show auth-only links if logged in
+    logoutBtn.style.display = "inline-block";
+    dashboardLink.style.display = "inline-block";
+    profileLink.style.display = "inline-block";
 
     try {
       const userDoc = await getDoc(doc(db, "users", user.uid));
@@ -80,6 +89,7 @@ onAuthStateChanged(auth, async (user) => {
 
   fetchJobs();
 });
+
 
 // Logout
 document.getElementById("logoutBtn").addEventListener("click", async (e) => {
