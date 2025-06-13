@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Profile - Career Counseling Platform</title>
+    <title>Profile - Career Counseling Platform</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/profile.css" />
     <script src="js/theme.js" defer></script>
@@ -18,22 +18,26 @@
         <a href="forum.html">Forum</a>
         <a href="job-board.html">Jobs</a>
         <a href="#" id="logoutBtn">Logout</a>
-        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
-          🌙
-        </button>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌙</button>
       </nav>
     </header>
 
     <main class="profile-main">
       <h2>Your Profile</h2>
-      <div class="profile-container">
-        <p><strong>Full Name:</strong> <span id="fullName">Loading...</span></p>
-        <p><strong>Email:</strong> <span id="email">Loading...</span></p>
-        <p><strong>Role:</strong> <span id="role">Loading...</span></p>
-        <p>
-          <strong>Career Interests:</strong>
-          <span id="interests">Loading...</span>
-        </p>
+      <div class="profile-card">
+        <p><strong>Full Name:</strong> <span id="fullName"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Role:</strong> <span id="role"></span></p>
+        <p><strong>Interests:</strong> <span id="interests"></span></p>
+
+        <div id="studentOnly" style="display: none">
+          <p><strong>Career Goals:</strong> <span id="careerGoals">Coming Soon</span></p>
+        </div>
+
+        <div id="counselorOnly" style="display: none">
+          <p><strong>Expertise:</strong> <span id="expertise">Coming Soon</span></p>
+        </div>
+
         <button id="editBtn">Edit Profile</button>
       </div>
     </main>
