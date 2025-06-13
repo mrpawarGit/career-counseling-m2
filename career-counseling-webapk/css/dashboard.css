@@ -1,0 +1,37 @@
+.dashboard-main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+}
+.card-link:hover {
+  text-decoration: underline;
+}
