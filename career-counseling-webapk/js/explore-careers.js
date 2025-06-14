@@ -838,7 +838,7 @@ function renderCareers(list) {
     const card = document.createElement("div");
     card.className = "career-card";
     card.innerHTML = `
-      <h3>${career.title}</h3>
+      <h3 class="title-in">${career.title}</h3>
       <p>${career.description}</p>
       <button class="btn view-btn" data-id="${career.id}">View Details</button>
     `;
@@ -870,7 +870,7 @@ function showModal(career) {
   modal.innerHTML = `
     <div class="modal-content">
       <span class="close-btn">&times;</span>
-      <h2>${career.title}</h2>
+      <h2 class="title-in">${career.title}</h2>
       <p>${career.description}</p>
       <p><strong>Required Skills:</strong> ${career.skills.join(", ")}</p>
       <p><strong>Education:</strong> ${career.education}</p>
@@ -881,7 +881,7 @@ function showModal(career) {
           ${career.resources
             .map(
               (r) =>
-                `<li><a href="${r.link}" target="_blank">${r.title}</a></li>`
+                `<li><a class="link-in" href="${r.link}" target="_blank">${r.title}</a></li>`
             )
             .join("")}
         </ul>

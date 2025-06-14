@@ -11,8 +11,11 @@ async function initPage() {
   try {
     await simulateLoading();
   } finally {
-    document.getElementById("loader-wrapper").style.display = "none";
-    document.getElementById("page-content").style.display = "block";
+    const loader = document.getElementById("loader-wrapper");
+    const content = document.getElementById("page-content");
+
+    if (loader) loader.style.display = "none";
+    if (content) content.style.display = "block";
   }
 }
 
