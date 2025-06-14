@@ -4,6 +4,8 @@
 A full-featured, responsive **Career Counseling Web Application** built using **HTML, CSS, JavaScript, and Firebase**. This platform helps students explore career options, take assessments, connect with counselors, participate in forums, and access career-related resources — all in one place.
 
 ---
+## Live Demo - https://careerguide-org.netlify.app/
+---
 
 ## 🔧 Tech Stack
 
