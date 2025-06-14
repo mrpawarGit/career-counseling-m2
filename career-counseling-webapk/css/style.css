@@ -350,3 +350,8 @@ footer {
   border-radius: 50%;
 }
 
+.loading-text-global{
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--main-title-color, #00695c);
+}

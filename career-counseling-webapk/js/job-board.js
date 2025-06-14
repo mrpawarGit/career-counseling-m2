@@ -25,7 +25,7 @@ async function fetchJobs() {
       jobsList.innerHTML = "<p>No jobs found.</p>";
       return;
     }
-
+    jobsList.innerHTML = '<p class="loading-text-global">Loading...</p>';
     const jobs = Object.values(data);
     renderJobs(jobs);
   } catch (err) {
@@ -91,8 +91,7 @@ onAuthStateChanged(auth, async (user) => {
     } catch (err) {
       console.error("Failed to fetch user role:", err);
     }
-  }
-  else {
+  } else {
     // Hide auth-only links if not logged in
     logoutBtn.style.display = "none";
     dashboardLink.style.display = "none";

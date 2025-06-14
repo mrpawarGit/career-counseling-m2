@@ -13,13 +13,15 @@ const forumContainer = document.getElementById("forumPosts");
 const newQuestionSection = document.getElementById("newQuestionSection");
 const questionForm = document.getElementById("questionForm");
 const logoutBtn = document.getElementById("logoutBtn");
-const API_URL = "https://authenticationauthorizat-95a91-default-rtdb.asia-southeast1.firebasedatabase.app/forums.json";
+const API_URL =
+  "https://authenticationauthorizat-95a91-default-rtdb.asia-southeast1.firebasedatabase.app/forums.json";
 
 let currentUser = null;
 let currentUserRole = null;
 
 // Fetch forum posts
 async function fetchPosts() {
+  forumContainer.innerHTML = '<p class="loading-text-global">Loading...</p>';
   try {
     const res = await fetch(API_URL);
     const data = await res.json();
@@ -44,7 +46,9 @@ function renderPosts(posts) {
     const timestamp = new Date(post.timestamp).toLocaleString();
 
     // Replies HTML
-    const repliesHTML = post.replies ? renderReplies(post.replies) : "<p>No replies yet.</p>";
+    const repliesHTML = post.replies
+      ? renderReplies(post.replies)
+      : "<p>No replies yet.</p>";
 
     // Only counselors can reply
     let replySection = "";
@@ -88,7 +92,9 @@ function renderReplies(repliesObj) {
 forumContainer.addEventListener("click", async (e) => {
   if (e.target.classList.contains("reply-btn")) {
     const postId = e.target.getAttribute("data-postid");
-    const textarea = forumContainer.querySelector(`.reply-textarea[data-postid="${postId}"]`);
+    const textarea = forumContainer.querySelector(
+      `.reply-textarea[data-postid="${postId}"]`
+    );
     const message = textarea.value.trim();
 
     if (!message) {
@@ -191,7 +197,8 @@ onAuthStateChanged(auth, async (user) => {
 
   // Show/hide "Ask a Question" section for students
   if (newQuestionSection) {
-    newQuestionSection.style.display = user && currentUserRole === "student" ? "block" : "none";
+    newQuestionSection.style.display =
+      user && currentUserRole === "student" ? "block" : "none";
   }
 
   // Show/hide logout button
