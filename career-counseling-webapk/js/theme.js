@@ -16,4 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleBtn.innerText = newTheme === "dark" ? "🌙" : "☀️";
     });
   }
+
+  // logo
+  let logo = document.querySelector(".header-title");
+  logo.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
 });

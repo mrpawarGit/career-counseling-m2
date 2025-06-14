@@ -58,6 +58,7 @@ header {
   text-align: left;
   font-size: 2rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 /* ===== NAVIGATION ===== */
@@ -290,6 +291,7 @@ footer {
 @media (max-width: 768px) {
   .header-title {
     font-size: 1.6rem;
+    cursor: pointer;
   }
 
   nav {
@@ -331,6 +333,7 @@ footer {
 .testimonials-slider::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 4px;
+  
 }
 
 .testimonials-slider::-webkit-scrollbar-track {
@@ -340,3 +343,10 @@ footer {
 [data-theme="dark"] .testimonials-slider::-webkit-scrollbar-thumb {
   background-color: #555;
 }
+
+.testimonial>img{
+  position: relative;
+  left: 25%;
+  border-radius: 50%;
+}
+
