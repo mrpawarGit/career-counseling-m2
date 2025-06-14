@@ -1,25 +1,63 @@
+/* loader.css */
+
 #loader-wrapper {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: white;
+  background-color: var(--loader-bg, rgba(255, 255, 255, 0.9));
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  backdrop-filter: blur(2px);
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] #loader-wrapper {
+  --loader-bg: rgba(15, 23, 42, 0.9);
 }
 
 .loader {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #3498db;
+  border: 6px solid var(--loader-track, #f3f3f3);
+  border-top: 6px solid var(--main-title-color, #00695c);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   animation: spin 0.8s linear infinite;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+[data-theme="dark"] .loader {
+  --loader-track: rgba(255, 255, 255, 0.1);
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 3px solid transparent;
+  border-top-color: var(--main-title-color, #00695c);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: spin 1.2s linear infinite reverse;
 }
 
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Optional: Add some branding */
+.loader-brand {
+  position: absolute;
+  font-weight: bold;
+  color: var(--main-title-color, #00695c);
+  margin-top: 90px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
