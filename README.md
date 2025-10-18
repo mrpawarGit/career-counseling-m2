@@ -7,6 +7,9 @@ A full-featured, responsive **Career Counseling Web Application** built using **
 ## Live Demo - https://careerguide-org.netlify.app/
 ---
 
+<img width="621" height="400" alt="image" src="https://github.com/user-attachments/assets/446379b0-896a-46a9-807a-499d3abb91ba" />
+
+---
 ## 🔧 Tech Stack
 
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (DOM, Fetch API)
